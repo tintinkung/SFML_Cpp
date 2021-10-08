@@ -1,6 +1,3 @@
-// SFML_CppGame.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
 #include "Game.h"
 
@@ -11,9 +8,17 @@
  *  #include "../External/include/SFML/Window.hpp"
  *  #include "../External/include/SFML/Audio.hpp"
  *  #include "../External/include/SFML/Network.hpp"
+ * 
+ --- contained string reference of main.cpp: 
+ * "../SFML_CppGame/SML_CppGame/SFML_CppGame.vcxproj", 
+ * "../SFML_CppGame/SML_CppGame/SFML_CppGame.vcxproj.filters"
  */
 
-
+/// <summary>
+/// main.cpp : 
+/// This file contains the 'main' function. Program execution begins and ends there.
+/// </summary>
+/// <returns>0</returns>
 int main()
 {
     // --- Init Game Engine ---
@@ -33,7 +38,7 @@ int main()
 
         // --- Render ---
         game.render();
-
+        
     }
 
     // std::cout << "Hello World!\n";
