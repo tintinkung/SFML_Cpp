@@ -1,7 +1,9 @@
 #ifndef ENEMY_HPP
 #define ENEMY_HPP
 
-#include "Game.h"
+#include <SFML/Graphics.hpp>
+#include <iostream>
+
 
 class Enemy
 {
@@ -20,23 +22,7 @@ private:
 
 	//damage of this enemy when reached over point
 	unsigned int hitDamage;
-
 	unsigned short int type;
-
-	// 0 = easiest -> 10 = hardest 
-	enum class Types
-	{
-		t_01 = 1,
-		t_02 = 2,
-		t_03 = 3,
-		t_04 = 4,
-		t_05 = 5,
-		t_06 = 6,
-		t_07 = 7,
-		t_08 = 8,
-		t_09 = 9,
-		t_10 = 10
-	};
 
 	void setVariablePrivate(unsigned int points, 
 		unsigned short int health, 
@@ -70,6 +56,7 @@ public:
 	// --- Functions ---
 	void initValiables();
 	void initType(unsigned short int type);
+	static int getTypeMember();
 };
 
 #endif // !ENEMY_HPP

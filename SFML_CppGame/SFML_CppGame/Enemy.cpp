@@ -67,3 +67,8 @@ void Enemy::initType(unsigned short int type)
 		break;
 	}
 }
+
+int Enemy::getTypeMember()
+{
+	return 5;
+}

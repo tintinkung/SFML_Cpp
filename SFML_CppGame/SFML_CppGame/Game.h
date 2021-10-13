@@ -54,9 +54,17 @@ class Game
 
 
 	// --- Game Objects ---
-		sf::RectangleShape enemyObject;
-		std::vector<sf::RectangleShape> enemies;
+		
+		struct RenderEnemy 
+		{
+			sf::RectangleShape enemyObject;
+			// std::vector<sf::RectangleShape> enemies;
 
+			// unsigned short int type;
+			Enemy enemyData;
+		};
+		RenderEnemy enemy;
+	    std::vector<RenderEnemy> enemies;
 
 	// --- Private functions ---
 		void initializeVariables();
@@ -87,7 +95,7 @@ class Game
 		//not rendering on the main window(default render target)
 		void renderText(sf::RenderTarget& target);
 		void updateText();
-		void setEnemy(Enemy enemyType);
+		void setEnemy(unsigned short int enemyType);
 		void update();
 		void render();
 };

@@ -56,12 +56,12 @@ void Game::initTexts()
 void Game::initEnemies()
 {
     #pragma region Set Enemy position
-    this->enemyObject.setPosition(10.0f, 10.0f);
-    this->enemyObject.setSize(sf::Vector2f(50.0f, 50.0f));
-    this->enemyObject.setScale(sf::Vector2f(1.0f, 1.0f));
-    this->enemyObject.setFillColor(sf::Color::Cyan);
-    this->enemyObject.setOutlineColor(sf::Color::Green);
-    this->enemyObject.setOutlineThickness(1.0f);
+    this->enemy.enemyObject.setPosition(10.0f, 10.0f);
+    this->enemy.enemyObject.setSize(sf::Vector2f(50.0f, 50.0f));
+    this->enemy.enemyObject.setScale(sf::Vector2f(1.0f, 1.0f));
+    this->enemy.enemyObject.setFillColor(sf::Color::Cyan);
+    this->enemy.enemyObject.setOutlineColor(sf::Color::Green);
+    this->enemy.enemyObject.setOutlineThickness(1.0f);
     #pragma endregion
 }
 
@@ -193,11 +193,14 @@ void Game::updateMousePositions()
     this->mousePosView = this->window->mapPixelToCoords(this->mousePosWindow);
 }
 
-void Game::setEnemy(Enemy enemyType)
+void Game::setEnemy(unsigned short int enemyType)
 {
-    this->enemyObject.setScale(sf::Vector2f(enemyType.getSize(), enemyType.getSize()));
-    this->enemyObject.setFillColor(enemyType.getBodyColor());
-    this->enemyObject.setOutlineColor(enemyType.getBorderColor());
+    this->enemy.enemyData.setType(enemyType);
+    
+    float enemySize = this->enemy.enemyData.getSize();
+    this->enemy.enemyObject.setScale(sf::Vector2f(enemySize, enemySize));
+    this->enemy.enemyObject.setFillColor(this->enemy.enemyData.getBodyColor());
+    this->enemy.enemyObject.setOutlineColor(this->enemy.enemyData.getBorderColor());
 }
 
 /// <summary>
@@ -209,19 +212,19 @@ void Game::setEnemy(Enemy enemyType)
 /// </summary>
 void Game::spawnEnemy()
 {
-    this->enemyObject.setPosition (
-        static_cast<float>(rand() % static_cast<int>(this->window->getSize().x - this->enemyObject.getSize().x)),
+    this->enemy.enemyObject.setPosition (
+        static_cast<float>(rand() % static_cast<int>(this->window->getSize().x - this->enemy.enemyObject.getSize().x)),
         0.0f
     );
 
     // Randomize emeny type
-    int type = rand() % 5;
-    Enemy enemyType(type + 1);
+    int type = rand() % Enemy::getTypeMember();
 
-    setEnemy(enemyType);
+
+    setEnemy(type + 1);
 
     // Spawn the enemy
-    this->enemies.push_back(this->enemyObject);
+    this->enemies.push_back(this->enemy);
 }
 
 /// <summary>
@@ -248,10 +251,10 @@ void Game::updateEnemies()
     {
         bool deleted = false;
 
-        this->enemies[i].move(0.0f, this->enemiesSpeed);
+        this->enemies[i].enemyObject.move(0.0f, this->enemiesSpeed);
 
         // Check if enemy passes bottom of the screen (obliterate it)
-        if (this->enemies[i].getPosition().y > this->window->getSize().y)
+        if (this->enemies[i].enemyObject.getPosition().y > this->window->getSize().y)
         {
             this->enemies.erase(this->enemies.begin() + i);
 
@@ -271,21 +274,9 @@ void Game::updateEnemies()
                 /** .getGlobalBounds()
                  *  - get bounds of enemy (enemy is rectangle)
                  */
-                if (this->enemies[i].getGlobalBounds().contains(this->mousePosView))
+                if (this->enemies[i].enemyObject.getGlobalBounds().contains(this->mousePosView))
                 {
-                    // Gain Points
-                    if (this->enemies[i].getFillColor() == sf::Color::Magenta)
-                        this->points += 10;
-                    else if (this->enemies[i].getFillColor() == sf::Color::Blue)
-                        this->points += 7;
-                    else if(this->enemies[i].getFillColor() == sf::Color::Red)
-                        this->points += 5;
-                    else if(this->enemies[i].getFillColor() == (sf::Color::Red + sf::Color::Yellow))
-                        this->points += 3;
-                    else if(this->enemies[i].getFillColor() == sf::Color::Yellow)
-                        this->points += 2;
-                    else if(this->enemies[i].getFillColor() == sf::Color::Green)
-                        this->points += 1;
+                    this->points += this->enemies[i].enemyData.getPoint();
 
                     // Delete the enemy
                     deleted = true;
@@ -313,7 +304,7 @@ void Game::renderEnemies(sf::RenderTarget& target)
 {
     for (auto &e : this->enemies)  //make for loop much faster
     {
-        target.draw(e);
+        target.draw(e.enemyObject);
     }
 }
 
