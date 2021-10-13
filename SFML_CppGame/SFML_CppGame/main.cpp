@@ -21,6 +21,10 @@
 /// <returns>0</returns>
 int main()
 {
+    // --- Initialize srand ---
+    srand(static_cast<unsigned>(time(NULL)));
+
+
     // --- Init Game Engine ---
     Game game;
 
@@ -31,7 +35,7 @@ int main()
      * As long as render window is open, game loop is on.
      * basically Unity Update() function.
      */
-    while (game.running())
+    while (game.running()/* && !game.gameIsEnded() */)
     {
         // --- Update ---
         game.update();
@@ -41,9 +45,7 @@ int main()
         
     }
 
-    // std::cout << "Hello World!\n";
-
-    //End of Application.
+    // === End of Application. ===
     return 0;
 }
 
