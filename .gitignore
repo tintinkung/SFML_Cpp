@@ -1,3 +1,49 @@
+# Project only
+SFML_CppGame/Assets/Fonts/Noto_Sans_Mono/static
+SFML_CppGame/Assets/Fonts/Noto_Sans_Mono/NotoSansMono.ttf
+
+##### JSON reader 
+# folders
+SFML_CppGame/External/include/JSON/.github/
+SFML_CppGame/External/include/JSON/.travis_scripts/
+SFML_CppGame/External/include/JSON/cmake/
+SFML_CppGame/External/include/JSON/devtools/
+SFML_CppGame/External/include/JSON/doc/
+SFML_CppGame/External/include/JSON/example/
+SFML_CppGame/External/include/JSON/pkg-config/
+SFML_CppGame/External/include/JSON/src/
+SFML_CppGame/External/include/JSON/test/
+SFML_CppGame/External/include/JSON/include/json/
+
+# include
+SFML_CppGame/External/include/JSON/include/json/
+SFML_CppGame/External/include/JSON/include/json/
+SFML_CppGame/External/include/JSON/include/PreventInBuildInstalls.cmake
+SFML_CppGame/External/include/JSON/include/PreventInSourceBuilds.cmake
+
+
+# assets
+SFML_CppGame/External/include/JSON/.clang-format
+SFML_CppGame/External/include/JSON/.clang-tidy
+SFML_CppGame/External/include/JSON/.clang-format
+SFML_CppGame/External/include/JSON/.travis.yml
+SFML_CppGame/External/include/JSON/amalgamate.py
+SFML_CppGame/External/include/JSON/appveyor.yml
+SFML_CppGame/External/include/JSON/BUILD.bazel
+SFML_CppGame/External/include/JSON/CONTRIBUTING.md
+SFML_CppGame/External/include/JSON/CTestConfig.cmake
+SFML_CppGame/External/include/JSON/dev.makefile
+SFML_CppGame/External/include/JSON/doxybuild.py
+SFML_CppGame/External/include/JSON/get_version.pl
+SFML_CppGame/External/include/JSON/jsoncppConfig.cmake.in
+SFML_CppGame/External/include/JSON/jsoncpp-namespaced-targets.cmake
+SFML_CppGame/External/include/JSON/meson.build
+SFML_CppGame/External/include/JSON/meson_options.txt
+SFML_CppGame/External/include/JSON/reformat.sh
+SFML_CppGame/External/include/JSON/version.in
+
+
+
 ##### Windows
 # Windows thumbnail cache files
 Thumbs.db
@@ -7,7 +53,6 @@ ehthumbs_vista.db
 
 # Dump file
 *.stackdump
-SFML_CppGame/Assets/Fonts/
 
 # Folder config file
 [Dd]esktop.ini

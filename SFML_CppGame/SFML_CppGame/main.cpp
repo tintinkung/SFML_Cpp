@@ -12,7 +12,7 @@
  --- contained string reference of main.cpp: 
  * "../SFML_CppGame/SML_CppGame/SFML_CppGame.vcxproj", 
  * "../SFML_CppGame/SML_CppGame/SFML_CppGame.vcxproj.filters"
- */
+ */ 
 
 /// <summary>
 /// main.cpp : 
@@ -24,9 +24,9 @@ int main()
     // --- Initialize srand ---
     srand(static_cast<unsigned>(time(NULL)));
 
-
     // --- Init Game Engine ---
     Game game;
+
 
 
     // --- MAIN GAME LOOP ---

@@ -12,8 +12,8 @@ void Game::initializeVariables()
 // --- Game Logic ---
     this->gameEnded = false;
     this->points = 0;
-    this->health = 10;
-    this->enemySpawnTimerMax = 50.0f;
+    this->health = 500;
+    this->enemySpawnTimerMax = 25.0f; //delay time between each enemy spawning
         //start timer at mac value then it returns to 0
     this->enemySpawnTimer = this->enemySpawnTimerMax; 
     this->enemiesSpeed = 10.0f;
@@ -276,6 +276,7 @@ void Game::updateEnemies()
                  */
                 if (this->enemies[i].enemyObject.getGlobalBounds().contains(this->mousePosView))
                 {
+                    //add points
                     this->points += this->enemies[i].enemyData.getPoint();
 
                     // Delete the enemy
@@ -291,13 +292,14 @@ void Game::updateEnemies()
     }
 
 
-
+    /*
     std::stringstream ss; ss 
         << "Enemy Spawn Delay: " << this->enemySpawnTimerMax - enemySpawnTimer
         << "  |  Points: " << this->points
         << "  |  Healths: " << this->health;
 
     std::cout << ss.str() << "   \r"; // DEBUGGING ONLY
+    */
 }
 
 void Game::renderEnemies(sf::RenderTarget& target)
@@ -320,5 +322,3 @@ void Game::updateText()
         << "Healths: " << this->health;
     this->uiText.setString(ss.str());
 }
-
-

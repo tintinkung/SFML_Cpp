@@ -1,0 +1,225 @@
+{
+    "EnemyType" : 
+    [
+        {   "type" : 1,
+
+            "points" : 3,
+            "health" : 1,
+            "size" : "2.2",
+            "hitDamage" : 40,
+            "moveSpeed" : "10.0",
+            "bodyColor" : 
+            {
+                "color" : "lime",
+                "rgba" : [120, 255, 0, 255],
+                "hex" : "#78FF00"
+            },
+            "borderColor" :
+            {
+                "color" : "lime-green",
+                "rgba" : [38, 255, 31, 255],
+                "hex" : "#26FF1F"
+            }
+        }, 
+        {   "type" : 2,
+
+            "points" : 5,
+            "health" : 1,
+            "size" : "2.0",
+            "hitDamage" : 36,
+            "moveSpeed" : "10.0",
+            "bodyColor" : 
+            {
+                "color" : "lime-green",
+                "rgba" : [38, 255, 31, 255],
+                "hex" : "#26FF1F"
+            },
+            "borderColor" : 
+            {
+                "color" : "green",
+                "rgba" : [136, 255, 31, 255],
+                "hex" : "#88FF1F"
+            }
+        },
+        {   "type" : 3,
+
+            "points" : 7,
+            "health" : 1,
+            "size" : "1.7",
+            "hitDamage" : 32,
+            "moveSpeed" : "10.0",
+            "bodyColor" : 
+            {
+                "color" : "green",
+                "rgba" : [136, 255, 31, 255],
+                "hex" : "#88FF1F"
+            },
+            "borderColor" :
+            {
+                "color" : "green-yellow",
+                "rgba" : [198, 255, 31, 255],
+                "hex" : "#C6FF1F"
+            }
+        },
+        {   "type" : 4,
+
+            "points" : 9,
+            "health" : 1,
+            "size" : "1.5",
+            "hitDamage" : 30,
+            "moveSpeed" : "10.0",
+            "bodyColor" : 
+            {
+                "color" : "green-yellow",
+                "rgba" : [198, 255, 31, 255],
+                "hex" : "#C6FF1F"
+            },
+            "borderColor" :
+            {
+                "color" : "yellow-green",
+                "rgba" : [226, 254, 34, 255],
+                "hex" : "#E2FE22"
+            }
+        },
+        {   "type" : 5,
+
+            "points" : 11,
+            "health" : 1,
+            "size" : "1.3",
+            "hitDamage" : 25,
+            "moveSpeed" : "10.0",
+            "bodyColor" : 
+            {
+                "color" : "yellow-green",
+                "rgba" : [226, 254, 34, 255],
+                "hex" : "#E2FE22"
+            },
+            "borderColor" :
+            {
+                "color" : "yellow",
+                "rgba" : [254, 254, 36, 255],
+                "hex" : "#FEFE22"
+            }
+        },
+        {   "type" : 6,
+
+            "points" : 13,
+            "health" : 1,
+            "size" : "1.05",
+            "hitDamage" : 20,
+            "moveSpeed" : "10.0",
+            "bodyColor" : 
+            {
+                "color" : "yellow",
+                "rgba" : [254, 254, 36, 255],
+                "hex" : "#FEFE22"
+            },
+            "borderColor" :
+            {
+                "color" : "yellow-orange",
+                "rgba" : [254, 215, 34, 255],
+                "hex" : "#FED722"
+            }
+        },
+        {   "type" : 7,
+
+            "points" : 15,
+            "health" : 1,
+            "size" : "0.985",
+            "hitDamage" : 18,
+            "moveSpeed" : "10.0",
+            "bodyColor" : 
+            {
+                "color" : "yellow-orange",
+                "rgba" : [254, 215, 34, 255],
+                "hex" : "#FED722"
+            },
+            "borderColor" :
+            {
+                "color" : "orange",
+                "rgba" : [254, 170, 34, 255],
+                "hex" : "#FEAA22"
+            }
+        },
+        {   "type" : 8,
+
+            "points" : 17,
+            "health" : 1,
+            "size" : "0.90",
+            "hitDamage" : 16,
+            "moveSpeed" : "10.0",
+            "bodyColor" : 
+            {
+                "color" : "orange",
+                "rgba" : [254, 170, 34, 255],
+                "hex" : "#FEAA22"
+            },
+            "borderColor" :
+            {
+                "color" : "orange-red",
+                "rgba" : [254, 121, 34, 255],
+                "hex" : "#FE7922"
+            }
+        },
+        {   "type" : 9,
+
+            "points" : 19,
+            "health" : 1,
+            "size" : "0.60",
+            "hitDamage" : 13,
+            "moveSpeed" : "10.0",
+            "bodyColor" : 
+            {
+                "color" : "orange-red",
+                "rgba" : [254, 121, 34, 255],
+                "hex" : "#FE7922"
+            },
+            "borderColor" :
+            {
+                "color" : "red",
+                "rgba" : [255, 39, 39, 255],
+                "hex" : "#FF2727"
+            }
+        },
+        {   "type" : 10,
+
+            "points" : 21,
+            "health" : 1,
+            "size" : "0.50",
+            "hitDamage" : 10,
+            "moveSpeed" : "10.0",
+            "bodyColor" : 
+            {
+                "color" : "red",
+                "rgba" : [255, 39, 39, 255],
+                "hex" : "#FF2727"
+            },
+            "borderColor" :
+            {
+                "color" : "red-violet",
+                "rgba" : [255, 39, 176, 255],
+                "hex" : "#FF27B0"
+            }
+        },
+        {   "type" : -1,
+
+            "points" : -1,
+            "health" : -1,
+            "size" : "1.0",
+            "hitDamage" : -1,
+            "moveSpeed" : "1.0",
+            "bodyColor" : 
+            {
+                "color" : "null",
+                "rgba" : [255, 0, 255, 255],
+                "hex" : "#FF00FF"
+            },
+            "borderColor" :
+            {
+                "color" : "null",
+                "rgba" : [255, 0, 255, 255],
+                "hex" : "#FF00FF"
+            }
+        }
+    ]
+ }

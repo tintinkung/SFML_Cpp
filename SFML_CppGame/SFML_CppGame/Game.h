@@ -15,7 +15,11 @@
 #include <sstream>
 #include "Enemy.hpp"
 
-class Enemy;
+#include <json\json.h>
+#include <json\value.h>
+#include <fstream>
+
+// ../SFML_CppGame/data/EnemyType.json
 
 /// <summary>
 /// Class that acts as the game engine.
@@ -59,8 +63,6 @@ class Game
 		{
 			sf::RectangleShape enemyObject;
 			// std::vector<sf::RectangleShape> enemies;
-
-			// unsigned short int type;
 			Enemy enemyData;
 		};
 		RenderEnemy enemy;
